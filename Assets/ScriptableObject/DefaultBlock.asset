@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0be7a751ff5af4fbd5d44f61a795cf, type: 3}
+  m_Name: DefaultBlock
+  m_EditorClassIdentifier: 
+  ID: 1
+  summonedBlock: {fileID: 5453379591582708136, guid: 7262cd679a707a34d9030b27e9d88a78, type: 3}
+  sprite: {fileID: -1068771857, guid: c9ddc97b159115940b4cc04b60292838, type: 3}
