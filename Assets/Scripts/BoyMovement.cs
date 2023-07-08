@@ -48,6 +48,7 @@ namespace DefaultNamespace{
 
 		private void PlayAnimation(){
 			_animator.SetBool($"Run", Mathf.Abs(_rigidbody2D.velocity.x) > 0);
+			_animator.SetFloat($"JumpState", _rigidbody2D.velocity.y);
 		}
 	}
 }

@@ -47,7 +47,7 @@ public class Mover : MonoBehaviour
         if(Dir_changer.Finished)
         {
             dir = dir * -1; 
-            transform.Translate(movespeed * dir, 0, 0);
+            transform.Translate(5 * dir, 0, 0);
 
             // reset timer and run it again
             Dir_changer.Duration = Random.Range(dirchange_lower, dirchange_upper);
