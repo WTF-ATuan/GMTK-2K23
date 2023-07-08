@@ -30,6 +30,7 @@ public class SpikeGoDown : MonoBehaviour
         if (collision.gameObject.GetComponentInParent<BoyMovement>())
         {
             //Trigger Death
+            Destroy(collision.gameObject);
         }
     }
 }
