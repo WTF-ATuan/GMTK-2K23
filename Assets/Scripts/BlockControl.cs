@@ -25,8 +25,8 @@ public class BlockControl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 	}
 
 	public void OnEndDrag(PointerEventData eventData){
-		var distance = Vector2.Distance(transform.localPosition, eventData.position + _deviation);
-		if(distance < 420){
+		var offsetX = _cloneGameObject.transform.position.x;
+		if(offsetX > 5){
 			Destroy(_cloneGameObject);
 			_canvasGroup.blocksRaycasts = true;
 			_canvasGroup.alpha = 1f;
@@ -37,8 +37,8 @@ public class BlockControl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 	}
 
 	public void OnDrag(PointerEventData eventData){
-		var distance = Vector2.Distance(transform.localPosition, eventData.position + _deviation);
+		var offsetX = _cloneGameObject.transform.position.x;
 		var worldPoint = (Vector2)Camera.main.ScreenToWorldPoint(eventData.position);
-		_cloneGameObject.transform.position = distance > 420 ? GameRoot.Root.PolishPosition(worldPoint) : worldPoint;
+		_cloneGameObject.transform.position = offsetX < 5 ? GameRoot.Root.PolishPosition(worldPoint) : worldPoint;
 	}
 }
