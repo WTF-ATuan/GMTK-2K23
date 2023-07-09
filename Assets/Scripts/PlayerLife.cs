@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerLife : MonoBehaviour
         if (dead == true)
         {
             //set dead code and animation
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+
         }
     }
 
@@ -27,6 +30,10 @@ public class PlayerLife : MonoBehaviour
             {
                 dead = true;
             }
+        }
+        if(collision.gameObject.CompareTag("Finish"))
+        {
+            dead = true;
         }
     }
 }
