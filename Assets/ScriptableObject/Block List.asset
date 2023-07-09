@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534e54475488cd649ab7bde3abdbcf8e, type: 3}
+  m_Name: Block List
+  m_EditorClassIdentifier: 
+  instantiatedBlock:
+  - {fileID: 11400000, guid: 5a984d013ee1ce147b8d6a67818bd607, type: 2}
+  - {fileID: 11400000, guid: 079b67c407ac541448773c37d859aea6, type: 2}
+  - {fileID: 11400000, guid: 034b230a84797334baa4e12e9d89616c, type: 2}
+  - {fileID: 11400000, guid: 2707f2c426eb063438adc26a7396ab7f, type: 2}
+  blocks:
+  - {fileID: 11400000, guid: 079b67c407ac541448773c37d859aea6, type: 2}
+  - {fileID: 11400000, guid: 079b67c407ac541448773c37d859aea6, type: 2}
+  - {fileID: 11400000, guid: 034b230a84797334baa4e12e9d89616c, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxSize: 15
