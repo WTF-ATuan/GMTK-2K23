@@ -2,6 +2,7 @@ using DefaultNamespace;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpikeGoDown : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class SpikeGoDown : MonoBehaviour
             //Trigger Death
             Destroy(collision.gameObject);
             manager.PlaySound("Death");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
 }

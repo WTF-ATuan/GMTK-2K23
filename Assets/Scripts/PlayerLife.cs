@@ -8,7 +8,7 @@ public class PlayerLife : MonoBehaviour
 {
     [SerializeField] GameObject[] hearts;
     [SerializeField] int heartCount;
-    private bool dead;
+    public bool dead;
 
     private void Update()
     {
