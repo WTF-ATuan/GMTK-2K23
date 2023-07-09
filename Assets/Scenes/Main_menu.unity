@@ -260,7 +260,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.5019608, g: 0, b: 0.2509804, a: 1}
+    m_NormalColor: {r: 0.5019608, g: 0.14901961, b: 0.3254902, a: 1}
     m_HighlightedColor: {r: 0.6, g: 0.2, b: 0.4, a: 1}
     m_PressedColor: {r: 0, g: 0.4, b: 0.4, a: 1}
     m_SelectedColor: {r: 0.6, g: 0.2, b: 0.4, a: 1}
@@ -488,7 +488,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.5019608, g: 0, b: 0.2509804, a: 1}
+    m_NormalColor: {r: 0.5019608, g: 0.14901961, b: 0.3254902, a: 1}
     m_HighlightedColor: {r: 0.6, g: 0.2, b: 0.4, a: 1}
     m_PressedColor: {r: 0, g: 0.4, b: 0.4, a: 1}
     m_SelectedColor: {r: 0.6, g: 0.2, b: 0.4, a: 1}
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 645343209}
   - component: {fileID: 645343208}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,7 +639,7 @@ RectTransform:
   m_GameObject: {fileID: 645343206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10.88, y: 10.88, z: 10.88}
+  m_LocalScale: {x: 14.630336, y: 14.630336, z: 14.630336}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1218060001}
@@ -647,7 +647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -85}
   m_SizeDelta: {x: -1820, y: -980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645343208
