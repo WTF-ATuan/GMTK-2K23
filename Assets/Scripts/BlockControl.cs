@@ -1,4 +1,5 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -20,17 +21,24 @@ public class BlockControl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 		worldPoint.z = 0;
 		_cloneGameObject = Instantiate(holdingBlock.summonedBlock, worldPoint, Quaternion.identity);
 		_canvasGroup.blocksRaycasts = false;
-		_canvasGroup.alpha = 0.7f;
+		_canvasGroup.alpha = 0f;
 	}
 
 	public void OnEndDrag(PointerEventData eventData){
-		_canvasGroup.blocksRaycasts = true;
-		_canvasGroup.alpha = 1f;
+		var distance = Vector2.Distance(transform.localPosition, eventData.position + _deviation);
+		if(distance < 420){
+			Destroy(_cloneGameObject);
+			_canvasGroup.blocksRaycasts = true;
+			_canvasGroup.alpha = 1f;
+		}
+		else{
+			Destroy(gameObject);
+		}
 	}
 
 	public void OnDrag(PointerEventData eventData){
-		transform.localPosition = eventData.position + _deviation;
+		var distance = Vector2.Distance(transform.localPosition, eventData.position + _deviation);
 		var worldPoint = (Vector2)Camera.main.ScreenToWorldPoint(eventData.position);
-		_cloneGameObject.transform.position = worldPoint;
+		_cloneGameObject.transform.position = distance > 420 ? GameRoot.Root.PolishPosition(worldPoint) : worldPoint;
 	}
 }
