@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using static Unity.Collections.AllocatorManager;
@@ -12,23 +13,23 @@ public class ListController : MonoBehaviour{
 	public Transform container;
 	public GameObject blockPrefab;
 	float timer;
-	[SerializeField] private float cd = 10;
+	[SerializeField] private Vector2 coldDownDuration = new Vector2(0.5f, 3f);
 
 	void Start(){
 		foreach(var item in blocks){
 			InitBlock(item);
 		}
 
-		timer = cd;
+		timer = Random.Range(coldDownDuration.x, coldDownDuration.y);
 	}
 
 	// Update is called once per frame
 	void Update(){
 		timer -= Time.deltaTime;
 		if(timer <= 0){
-			timer = cd;
-			Add(2);
-			InitBlock(blocks[index: Random.Range(1, blocks.Count)]);
+			timer = Random.Range(coldDownDuration.x, coldDownDuration.y);
+			Add(Random.Range(0, instantiatedBlock.Count));
+			InitBlock(blocks.Last());
 		}
 	}
 
