@@ -13,7 +13,7 @@ public class ListController : MonoBehaviour{
 	public Transform container;
 	public GameObject blockPrefab;
 	float timer;
-	[SerializeField] private Vector2 coldDownDuration = new Vector2(0.5f, 3f);
+	[SerializeField] private Vector2 coldDownDuration = new Vector2(0.5f, 2f);
 
 	void Start(){
 		foreach(var item in blocks){
