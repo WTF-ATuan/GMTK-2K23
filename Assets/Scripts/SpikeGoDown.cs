@@ -6,10 +6,12 @@ using UnityEngine;
 public class SpikeGoDown : MonoBehaviour
 {
     public float moveDownSpeed;
+    AudioManager manager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        manager = AudioManager.Instance;
+        manager.PlayMusic("BGM1");
     }
 
     // Update is called once per frame
