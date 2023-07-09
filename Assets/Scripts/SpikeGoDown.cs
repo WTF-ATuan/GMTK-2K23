@@ -11,12 +11,13 @@ public class SpikeGoDown : MonoBehaviour
     void Start()
     {
         manager = AudioManager.Instance;
-        manager.PlayMusic("BGM1");
+        manager.PlaySound("BGM1");        
     }
 
     // Update is called once per frame
     void Update()
     {
+
         transform.position -= new Vector3(0f, moveDownSpeed, 0f) * Time.deltaTime;
     }
 
@@ -33,6 +34,7 @@ public class SpikeGoDown : MonoBehaviour
         {
             //Trigger Death
             Destroy(collision.gameObject);
+            manager.PlaySound("Death");
         }
     }
 }

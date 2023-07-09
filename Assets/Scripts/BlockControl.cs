@@ -11,7 +11,7 @@ public class BlockControl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 	private Vector2 _deviation;
 	private GameObject _cloneGameObject;
 
-	private void Awake(){
+    private void Awake(){
 		_canvasGroup = GetComponent<CanvasGroup>();
 	}
 
