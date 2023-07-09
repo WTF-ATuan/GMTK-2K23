@@ -8,12 +8,14 @@ namespace DefaultNamespace{
 		private Animator _animator;
 		private Rigidbody2D _rigidbody2D;
 		private SpriteRenderer _spriteRenderer;
+		private AudioManager audioManager;
 
 
 		private void Start(){
 			_animator = GetComponent<Animator>();
 			_rigidbody2D = GetComponent<Rigidbody2D>();
 			_spriteRenderer = GetComponent<SpriteRenderer>();
+			audioManager = AudioManager.Instance;	
 		}
 
 		private void OnCollisionEnter2D(Collision2D col){
@@ -44,6 +46,8 @@ namespace DefaultNamespace{
 				velocity = new Vector2(-speed, velocity.y);
 				_rigidbody2D.velocity = velocity;
 			}
+			audioManager.PlaySound("WalkingSound");
+
 		}
 
 		private void PlayAnimation(){
