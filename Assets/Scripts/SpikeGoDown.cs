@@ -35,7 +35,7 @@ public class SpikeGoDown : MonoBehaviour
         {
             //Trigger Death
             Destroy(collision.gameObject);
-            manager.PlaySound("Death");
+            //manager.PlaySound("Death");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
